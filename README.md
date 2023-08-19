@@ -3,7 +3,6 @@
 
 # Malaria Detection and Species Classification
 
-![Malaria](imgs/malaria.jpg)
 
 ## Table of Contents
 - [Overview](#overview)
