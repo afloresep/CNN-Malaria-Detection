@@ -108,3 +108,4 @@ def split_folder_to_train_test_valid(data_directory):
         args = parser.parse_args()
         
         split_folder_to_train_test_valid(args.data_directory)
+        
