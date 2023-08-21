@@ -1,0 +1,13 @@
+# Compiled Python files
+__pycache__/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore specific files and directories
+__pycache__/tools.cpython-39.pyc
+data_preprocessing.ipynb
+../data/cell_images/test/
+../data/cell_images/train/
+../data/cell_images/validation/
+../malaria-env/
