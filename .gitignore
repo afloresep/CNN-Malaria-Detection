@@ -11,3 +11,10 @@ data/cell_images/test/
 data/cell_images/train/
 data/cell_images/validation/
 malaria-env/
+
+src/__pycache__/tools.cpython-39.pyc
+src/data_preprocessing.ipynb
+data/cell_images/test/
+data/cell_images/train/
+data/cell_images/validation/
+malaria-env/
