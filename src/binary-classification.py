@@ -157,7 +157,7 @@ print(sample_batch_input.shape,sample_batch_labels.shape)
 
 print("\nBuilding model...")
 
-def design_model(training_data):
+def design_model():
     '''
     Model as defined by Sumit Kumar et al. 
     Ref: https://arxiv.org/pdf/2303.03397.pdf
@@ -232,12 +232,12 @@ def design_model(training_data):
     model.summary()
     return model
     
-model = design_model(training_iterator)
+model = design_model()
 # model with input shape (64, 64, 3)
 
 
 # model with input shape (256, 256, 3)
-def design_model_2(training_data):
+def design_model_2():
     '''
     Model as defined by Sumit Kumar et al. but changing input shape to (256,256,3)
     Ref: https://arxiv.org/pdf/2303.03397.pdf

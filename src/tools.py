@@ -44,17 +44,15 @@ def split_folder_to_train_test_valid(data_directory):
     Args:
         data_directory (str): Path to the original data directory containing subdirectories for each class.
     """
-
-    original_data_dir = '../data/cell_images'
-    train_dir = '../data/cell_images/train'
-    test_dir = '../data/cell_images/test'
-    validation_dir = '../data/cell_images/validation'
+    train_dir = os.path.join(data_directory, 'train')
+    test_dir = os.path.join(data_directory, 'test')
+    validation_dir = os.path.join(data_directory, 'validation')
 
     # Get a list of class subdirectories in the original data directory
-    class_subdirectories = [d for d in os.listdir(original_data_dir) if os.path.isdir(os.path.join(original_data_dir, d))]
+    class_subdirectories = [d for d in os.listdir(data_directory) if os.path.isdir(os.path.join(data_directory, d))]
 
     for class_subdir in class_subdirectories: # for 'Class' in ['Class1', 'Class2']
-        class_path = os.path.join(original_data_dir, class_subdir) # ../data/cell_images/Parasitized and ../data/cell_images/Uninfected
+        class_path = os.path.join(data_directory, class_subdir) # ../data/cell_images/Parasitized and ../data/cell_images/Uninfected
         class_images = [img for img in os.listdir(class_path)] # ['C13NThinF_IMG_20150614_131318_cell_179.png'... all images for each class
 
         train_images, test_validation_images = train_test_split(class_images, test_size=0.3, random_state=42)
