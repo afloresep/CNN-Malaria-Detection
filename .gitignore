@@ -18,3 +18,5 @@ data/cell_images/test/
 data/cell_images/train/
 data/cell_images/validation/
 malaria-env/
+folders-splitted/
+models/
