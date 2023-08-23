@@ -137,3 +137,26 @@ def plot_performance(history=None, figure_directory=None):
         plt.savefig(figure_directory+"/history")
 
     plt.show()
+
+
+
+# plotting categorical and validation accuracy over epochs
+fig = plt.figure()
+ax1 = fig.add_subplot(2, 1, 1)
+ax1.plot(history.history['categorical_accuracy'])
+ax1.plot(history.history['val_categorical_accuracy'])
+ax1.set_title('model accuracy')
+ax1.set_xlabel('epoch')
+ax1.set_ylabel('accuracy')
+ax1.legend(['train', 'validation'], loc='upper left')
+
+# plotting auc and validation auc over epochs
+ax2 = fig.add_subplot(2, 1, 2)
+ax2.plot(history.history['auc'])
+ax2.plot(history.history['val_auc'])
+ax2.set_title('model auc')
+ax2.set_xlabel('epoch')
+ax2.set_ylabel('auc')
+ax2.legend(['train', 'validation'], loc='upper left')
+
+plt.show()
